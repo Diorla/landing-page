@@ -1,0 +1,61 @@
+#home {
+  background-image: url("https://cdn.pixabay.com/photo/2018/08/04/18/17/wallpaper-3584226_960_720.jpg");
+  width: 100%;
+  height: calc(100vh - 4.8rem);
+  margin-top: -2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 4px black;
+  flex-direction: column;
+  text-align: center;
+}
+#home::after {
+  /* background-image: url("https://cdn.pixabay.com/photo/2014/04/02/10/21/spacecraft-303592_960_720.png"); */
+  width: 10rem;
+  height: 10rem;
+  position: fixed;
+  content: "";
+  background-color: rgba(255, 0, 0, 0.4);
+  animation: rotate 5s linear 0s infinite forwards reverse;
+  left: 2rem;
+  bottom: 2rem;
+  border-radius: 50%;
+}
+
+#home::before {
+  content: "v";
+  animation: bounce 2s ease-in-out 0s infinite forwards;
+  position: absolute;
+  top: 90vh;
+  left: 50vw;
+  font-size: 6rem;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate(-1em) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+    transform: rotate(180deg) translate(4rem) rotate(-180deg) scale(0.5);
+  }
+  100% {
+    transform: rotate(360deg) translate(-1em) rotate(-360deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-1.6rem);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1.6rem);
+  }
+}

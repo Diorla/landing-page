@@ -1,0 +1,24 @@
+nav {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+.desktop-header > ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 16px 0;
+  box-shadow: 0 0 4px;
+  text-transform: capitalize;
+}
+
+li.active {
+  font-weight: bold;
+}
+
+nav.mobile-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
