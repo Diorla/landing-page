@@ -1,0 +1,74 @@
+#gallery {
+  background-color: aliceblue;
+  padding: 0.8rem;
+}
+
+#gallery > h2 {
+  text-align: center;
+}
+
+.gallery-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.gallery-card {
+  min-height: 20rem;
+  width: 20rem;
+  box-shadow: 0 0 0.2rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://loremflickr.com/200/200/random/all);
+  margin: 0.8rem;
+  box-shadow: 0 0 0.4rem black;
+  cursor: pointer;
+  background-size: 100%;
+  transition: background-size 0.5s linear;
+  border-radius: 0.6rem;
+}
+
+.gallery-card-title {
+  background-color: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  transition: 0.5s linear;
+}
+
+.gallery-card:hover > .gallery-card-title {
+  opacity: 1;
+}
+
+.gallery-card:hover {
+  background-size: 120%;
+  box-shadow: 0 0 0.8rem;
+}
+
+.gallery-card:nth-child(2) {
+  background-image: url(https://loremflickr.com/200/200/popular/all);
+}
+.gallery-card:nth-child(3) {
+  background-image: url(https://loremflickr.com/200/200/science/all);
+}
+.gallery-card:nth-child(4) {
+  background-image: url(https://loremflickr.com/200/200/technology/all);
+}
+.gallery-card:nth-child(5) {
+  background-image: url(https://loremflickr.com/200/200/earth/all);
+}
+.gallery-card:nth-child(6) {
+  background-image: url(https://loremflickr.com/200/200/star/all);
+}
+.gallery-card:nth-child(7) {
+  background-image: url(https://loremflickr.com/200/200/story/all);
+}
+.gallery-card:nth-child(8) {
+  background-image: url(https://loremflickr.com/200/200/winter/all);
+}
+.gallery-card:nth-child(9) {
+  background-image: url(https://loremflickr.com/200/200/summer/all);
+}
+.gallery-card:nth-child(10) {
+  background-image: url(https://loremflickr.com/200/200/daylight/all);
+}
