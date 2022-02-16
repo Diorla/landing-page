@@ -1,12 +1,12 @@
-.fa-solid {
-  font-size: 2.1rem;
-  color: var(--primary-color);
-  align-self: center;
-}
-
 #about > h2,
 #about > .subtitle {
   text-align: center;
+}
+
+#about .fa-solid {
+  font-size: 2.1rem;
+  color: var(--primary-color);
+  align-self: center;
 }
 
 .about-item {

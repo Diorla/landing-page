@@ -6,6 +6,13 @@
 
 #top {
   position: fixed;
+  font-size: 2.7rem;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  background-color: transparent;
+  border: none;
+  color: var(--secondary-color);
+  cursor: pointer;
 }
 /*
 
