@@ -1,0 +1,28 @@
+.fa-solid {
+  font-size: 2.1rem;
+  color: var(--primary-color);
+  align-self: center;
+}
+
+#about > h2,
+#about > .subtitle {
+  text-align: center;
+}
+
+.about-item {
+  width: clamp(18rem, 25%, 32rem);
+  margin: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-item-title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
