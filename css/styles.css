@@ -2,7 +2,11 @@
 @import url(nav.css);
 @import url(home.css);
 @import url(about.css);
+@import url(footer.css);
 
+#top {
+  position: fixed;
+}
 /*
 
 footer,
