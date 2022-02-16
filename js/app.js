@@ -5,7 +5,8 @@ const home = document.querySelector("#home");
 const about = document.querySelector("#about");
 const gallery = document.querySelector("#gallery");
 const testimony = document.querySelector("#testimony");
-const staff = document.querySelector("#staff");
+const team = document.querySelector("#team");
+const pricing = document.querySelector("#pricing");
 const contactUs = document.querySelector("#contact-us");
 const footer = document.querySelector("footer");
 const topButton = document.getElementById("top");
@@ -30,7 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "about",
     "gallery",
     "testimony",
-    "staff",
+    "team",
+    "pricing",
     "contactUs",
     "footer",
   ];
