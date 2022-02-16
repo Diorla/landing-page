@@ -1,0 +1,42 @@
+body {
+  background: orange;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+main {
+  height: 100vh;
+}
+nav {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+footer,
+#id {
+  height: 70px;
+}
+
+.hidden {
+  animation: 1s linear 1s 1 forwards hide;
+}
+
+.visible {
+  opacity: 1;
+}
+
+@keyframes hide {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+button {
+  position: fixed;
+  bottom: 0;
+  right: 80px;
+}
