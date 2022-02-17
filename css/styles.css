@@ -4,6 +4,12 @@
 @import url(about.css);
 @import url(footer.css);
 @import url(gallery.css);
+@import url(testimonial.css);
+
+h2,
+.subtitle {
+  text-align: center;
+}
 
 #top {
   position: fixed;
@@ -12,8 +18,14 @@
   bottom: 0.5rem;
   background-color: transparent;
   border: none;
-  color: var(--secondary-color);
+  color: var(--dark-secondary-color);
   cursor: pointer;
+}
+
+.section-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 /*
 

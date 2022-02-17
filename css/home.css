@@ -11,6 +11,7 @@
   text-shadow: 0 0 0.4rem black;
   flex-direction: column;
   text-align: center;
+  background-size: cover;
 }
 #home::after {
   /* background-image: url("https://cdn.pixabay.com/photo/2014/04/02/10/21/spacecraft-303592_960_720.png"); */

@@ -4,7 +4,7 @@ const mobileNav = document.querySelector(".mobile-header");
 const home = document.querySelector("#home");
 const about = document.querySelector("#about");
 const gallery = document.querySelector("#gallery");
-const testimony = document.querySelector("#testimony");
+const testimonial = document.querySelector("#testimonial");
 const team = document.querySelector("#team");
 const pricing = document.querySelector("#pricing");
 const contactUs = document.querySelector("#contact-us");
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "home",
     "about",
     "gallery",
-    "testimony",
+    "testimonial",
     "team",
     "pricing",
     "contactUs",

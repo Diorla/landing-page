@@ -1,8 +1,3 @@
-#about > h2,
-#about > .subtitle {
-  text-align: center;
-}
-
 #about .fa-solid {
   font-size: 2.1rem;
   color: var(--primary-color);
@@ -19,10 +14,4 @@
 .about-item-title {
   font-weight: bold;
   text-align: center;
-}
-
-.about-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
 }
