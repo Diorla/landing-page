@@ -1,0 +1,61 @@
+.pricing-card {
+  width: 20rem;
+  background-color: var(--light-color);
+}
+
+.pricing-header {
+  background: var(--dark-color);
+  color: var(--light-color);
+  text-align: center;
+  padding: 1.2rem;
+}
+
+.pricing-name,
+.pricing-cost {
+  font-size: var(--text-size-biggest);
+}
+
+.pricing-cost {
+  font-weight: bold;
+}
+
+.pricing-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.2rem auto;
+}
+
+.pricing-body > .fa-solid {
+  font-size: var(--text-size-biggest);
+}
+
+.pricing-description {
+  font-weight: bold;
+}
+
+.pricing-body > button {
+  border: none;
+  background-color: var(--dark-primary-color);
+  color: var(--light-color);
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+  font-size: var(--text-size-normal);
+  cursor: pointer;
+  transition: 0.5s linear;
+}
+
+.pricing-body > button:hover {
+  background-color: var(--light-primary-color);
+  color: var(--dark-color);
+}
+
+.pricing-card:nth-child(2) {
+  transform: scale(1.2);
+}
+
+@media screen and (min-width: 640px) {
+  #pricing > .section-wrapper {
+    margin: 3rem 0 4rem;
+  }
+}

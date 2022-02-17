@@ -22,3 +22,9 @@ nav.mobile-header {
   top: 0;
   right: 0;
 }
+
+@media screen and (max-width: 64rem) {
+  .desktop-header {
+    display: none;
+  }
+}
