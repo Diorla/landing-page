@@ -3,8 +3,14 @@
   --light-primary-color: #f8bab2;
   --dark-primary-color: #d3392e;
   --dark-color: #181818;
+  --dark-undertone-color: #524f4f;
   --light-color: #f1f1f1;
   --secondary-color: #d6e6f3;
   --dark-secondary-color: #84b1d8;
   --light-secondary-color: aliceblue;
+  --text-size-smallest: 1.2rem;
+  --text-size-small: 1.4rem;
+  --text-size-normal: 1.6rem;
+  --text-size-big: 1.8rem;
+  --text-size-biggest: 2.1rem;
 }

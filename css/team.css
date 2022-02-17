@@ -1,0 +1,30 @@
+figure {
+  width: 20rem;
+}
+
+figure > img {
+  width: 100%;
+  box-shadow: 0 0 1px;
+}
+
+figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.member-name {
+  font-weight: bold;
+}
+
+.member-position {
+  font-style: italic;
+  color: var(--dark-undertone-color);
+  margin-bottom: 2rem;
+  font-weight: bolder;
+}
+
+.member-quote {
+  color: var(--dark-undertone-color);
+  text-align: center;
+}

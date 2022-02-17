@@ -5,6 +5,7 @@
 @import url(footer.css);
 @import url(gallery.css);
 @import url(testimonial.css);
+@import url(team.css);
 
 h2,
 .subtitle {
@@ -27,17 +28,7 @@ h2,
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-/*
 
-footer,
-#id {
-  height: 70px;
+main > div:nth-child(odd) {
+  background-color: var(--light-secondary-color);
 }
-
-
-
-button {
-  position: fixed;
-  bottom: 0;
-  right: 80px;
-} */

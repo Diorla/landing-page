@@ -7,7 +7,7 @@ body {
   scroll-behavior: smooth;
   background-color: var(--light-primary-color);
   font-family: "Nunito", sans-serif;
-  font-size: 1.6rem;
+  font-size: var(--text-size-normal);
 }
 
 .hidden {
