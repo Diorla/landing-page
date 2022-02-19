@@ -12,6 +12,7 @@ const contactUs = document.querySelector("#contact-us");
 const footer = document.querySelector("footer");
 const topButton = document.getElementById("top");
 const mobileMenuIcon = document.querySelector(".fa-solid.menu-icon");
+const galleryCards = document.querySelectorAll(".gallery-card");
 
 // utility function: turns "helloWorld" to "hello world"
 const pascalToSentence = (str) =>
@@ -130,3 +131,15 @@ topButton.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+galleryCards.forEach((item) =>
+  item.addEventListener("click", () => {
+    document.querySelector(".image-modal").classList.remove("hidden");
+  })
+);
+
+document
+  .querySelector(".image-modal .fa-solid")
+  .addEventListener("click", () => {
+    document.querySelector(".image-modal").classList.add("hidden");
+  });

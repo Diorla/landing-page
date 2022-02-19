@@ -67,3 +67,37 @@
 .gallery-card:nth-child(10) {
   background-image: url(https://loremflickr.com/200/200/daylight/all);
 }
+
+.image-modal {
+  position: fixed;
+  top: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  background: var(--dark-undertone-color);
+  color: var(--light-color);
+  left: 0;
+  top: 0;
+  z-index: 3;
+}
+
+.image-modal > img {
+  aspect-ratio: 16/9;
+}
+
+.image-modal .fa-solid {
+  position: fixed;
+  right: 4rem;
+  top: 4rem;
+  cursor: pointer;
+}
+
+.image-modal.hidden {
+  z-index: -3;
+  animation: none;
+  display: none;
+}
