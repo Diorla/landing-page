@@ -13,6 +13,7 @@
   text-align: center;
   background-size: cover;
 }
+
 #home::after {
   /* background-image: url("https://cdn.pixabay.com/photo/2014/04/02/10/21/spacecraft-303592_960_720.png"); */
   width: 10rem;
@@ -34,6 +35,11 @@
   left: 50vw;
   font-size: 6rem;
 }
+
+#home > p {
+  width: clamp(180px, 75%, 640px);
+}
+
 @keyframes rotate {
   0% {
     transform: rotate(0deg) translate(-1em) rotate(0deg) scale(1);
@@ -58,5 +64,12 @@
   }
   100% {
     transform: translateY(-1.6rem);
+  }
+}
+
+@media screen and (max-width: 64rem) {
+  #home {
+    height: 100vh;
+    margin-top: 0;
   }
 }
