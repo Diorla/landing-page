@@ -1,6 +1,7 @@
 // elements
 const desktopNav = document.querySelector(".desktop-header");
 const mobileNav = document.querySelector(".mobile-header");
+const mobileMenu = document.querySelector(".mobile-header > .mobile-menu");
 const home = document.querySelector("#home");
 const about = document.querySelector("#about");
 const gallery = document.querySelector("#gallery");
@@ -10,6 +11,7 @@ const pricing = document.querySelector("#pricing");
 const contactUs = document.querySelector("#contact-us");
 const footer = document.querySelector("footer");
 const topButton = document.getElementById("top");
+const mobileMenuIcon = document.querySelector(".fa-solid.menu-icon");
 
 const pascalToSentence = (str) =>
   str
@@ -25,7 +27,8 @@ const pascalToSnake = (str) =>
     .toLowerCase()
     .trim();
 document.addEventListener("DOMContentLoaded", () => {
-  let list = `<ul>`;
+  let desktopList = `<ul>`;
+  let mobileList = `<ul>`;
   const navList = [
     "home",
     "about",
@@ -37,16 +40,25 @@ document.addEventListener("DOMContentLoaded", () => {
     "footer",
   ];
   navList.forEach((item) => {
-    const listItem = `<li id="${pascalToSnake(
+    const listItem = `<li id="d-${pascalToSnake(
       item
     )}-nav" class="nav-item">${pascalToSentence(item)}</li>`;
-    list += listItem;
+    desktopList += listItem;
+    const mobileItem = `<li id="m-${pascalToSnake(
+      item
+    )}-nav" class="nav-item">${pascalToSentence(item)}</li>`;
+    mobileList += mobileItem;
   });
-  list += "</ul>";
-  desktopNav.innerHTML = list;
+  desktopList += "</ul>";
+  mobileList += "</ul>";
+  desktopNav.innerHTML = desktopList;
+  mobileMenu.innerHTML = mobileList;
 
   document
-    .querySelector(`#${pascalToSnake(navList[0])}-nav`)
+    .querySelector(`#d-${pascalToSnake(navList[0])}-nav`)
+    .classList.add("active");
+  document
+    .querySelector(`#m-${pascalToSnake(navList[0])}-nav`)
     .classList.add("active");
 });
 
@@ -60,6 +72,15 @@ document.addEventListener("scroll", () => {
     }, 1000);
 });
 
+mobileMenuIcon.addEventListener("click", () => {
+  if (mobileNav.classList.contains("collapsed")) {
+    mobileNav.classList.remove("collapsed");
+    mobileMenuIcon.classList.add("fa-xmark").remove("fa-bars");
+  } else {
+    mobileNav.classList.add("collapsed");
+    mobileMenuIcon.classList.remove("fa-xmark").add("fa-bars");
+  }
+});
 // let options = {
 //   root: document,
 //   rootMargin: "0px",
