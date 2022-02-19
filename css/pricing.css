@@ -1,6 +1,7 @@
 .pricing-card {
   width: 20rem;
   background-color: var(--light-color);
+  margin: 0.4rem;
 }
 
 .pricing-header {
@@ -50,12 +51,12 @@
   color: var(--dark-color);
 }
 
-.pricing-card:nth-child(2) {
-  transform: scale(1.2);
+#pricing > .section-wrapper {
+  margin: 3rem 0 4rem;
 }
 
 @media screen and (min-width: 640px) {
-  #pricing > .section-wrapper {
-    margin: 3rem 0 4rem;
+  .pricing-card:nth-child(2) {
+    transform: scale(1.2);
   }
 }
