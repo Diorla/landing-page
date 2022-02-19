@@ -75,34 +75,41 @@ document.addEventListener("scroll", () => {
 mobileMenuIcon.addEventListener("click", () => {
   if (mobileNav.classList.contains("collapsed")) {
     mobileNav.classList.remove("collapsed");
-    mobileMenuIcon.classList.add("fa-xmark").remove("fa-bars");
+    mobileMenuIcon.classList.add("fa-xmark");
   } else {
     mobileNav.classList.add("collapsed");
-    mobileMenuIcon.classList.remove("fa-xmark").add("fa-bars");
+    mobileMenuIcon.classList.remove("fa-xmark");
   }
 });
-// let options = {
-//   root: document,
-//   rootMargin: "0px",
-//   threshold: 1,
-// };
 
-// let observer = new IntersectionObserver((obList) => {
-//   // Only the first
-//   const [observeEntry] = obList;
-//   const { isIntersecting, target } = observeEntry;
+let options = {
+  root: document,
+  rootMargin: "0px",
+  threshold: 1,
+};
 
-//   if (isIntersecting) {
-//     // it is entering: scrolling down
-//     if (target.tagName === "MAIN") info.textContent = "main";
-//     if (target.tagName === "FOOTER") info.textContent = "footer";
-//     if (target.id === "id") info.textContent = "ID";
-//   } else {
-//     // it is leaving: scrolling up
-//     if (target.tagName === "FOOTER") info.textContent = "main";
-//     if (target.id === "id") info.textContent = "footer";
-//   }
-// });
+let observer = new IntersectionObserver((obList) => {
+  // Only the first
+  const [observeEntry] = obList;
+  const { isIntersecting, target } = observeEntry;
+
+  if (isIntersecting) {
+    document
+      .querySelectorAll(".nav-item")
+      .forEach((item) => item.classList.remove("active"));
+    document.querySelector(`#d-${target.id}-nav`)?.classList.add("active");
+    document.querySelector(`#m-${target.id}-nav`)?.classList.add("active");
+  }
+});
+
+observer.observe(home);
+observer.observe(about);
+observer.observe(gallery);
+observer.observe(testimonial);
+observer.observe(team);
+observer.observe(pricing);
+observer.observe(contactUs);
+observer.observe(footer);
 
 // button.addEventListener("click", () => {
 //   document.body.scrollTo({
@@ -112,6 +119,3 @@ mobileMenuIcon.addEventListener("click", () => {
 //   });
 //   // footer.scrollIntoView({ behavior: 'smooth' });
 // });
-// observer.observe(main);
-// observer.observe(footer);
-// observer.observe(elemId);
