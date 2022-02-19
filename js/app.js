@@ -42,11 +42,15 @@ document.addEventListener("DOMContentLoaded", () => {
   navList.forEach((item) => {
     const listItem = `<li id="d-${pascalToSnake(
       item
-    )}-nav" class="nav-item">${pascalToSentence(item)}</li>`;
+    )}-nav" class="nav-item"><a href="#${pascalToSnake(
+      item
+    )}">${pascalToSentence(item)}</a></li>`;
     desktopList += listItem;
     const mobileItem = `<li id="m-${pascalToSnake(
       item
-    )}-nav" class="nav-item">${pascalToSentence(item)}</li>`;
+    )}-nav" class="nav-item"><a href="#${pascalToSnake(
+      item
+    )}">${pascalToSentence(item)}</a></li>`;
     mobileList += mobileItem;
   });
   desktopList += "</ul>";
@@ -111,11 +115,10 @@ observer.observe(pricing);
 observer.observe(contactUs);
 observer.observe(footer);
 
-// button.addEventListener("click", () => {
-//   document.body.scrollTo({
-//     top: 0,
-//     left: 0,
-//     behavior: "smooth",
-//   });
-//   // footer.scrollIntoView({ behavior: 'smooth' });
-// });
+topButton.addEventListener("click", () => {
+  document.body.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+});
