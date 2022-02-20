@@ -23,8 +23,9 @@ nav a:hover {
   text-transform: capitalize;
 }
 
-li.active {
+li.active > a {
   font-weight: bold;
+  color: var(--dark-secondary-color);
 }
 
 .mobile-header {
