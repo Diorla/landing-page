@@ -79,7 +79,19 @@ document.addEventListener("scroll", () => {
   if (document.body.scrollTop > 50)
     timeoutId = setTimeout(() => {
       desktopNav.classList.add("hidden");
-    }, 1000);
+    }, 1500);
+});
+
+desktopNav.addEventListener("mouseover", () => {
+  desktopNav.classList.remove("hidden");
+  if (timeoutId) clearTimeout(timeoutId);
+});
+
+desktopNav.addEventListener("mouseleave", () => {
+  if (document.body.scrollTop > 50)
+    timeoutId = setTimeout(() => {
+      desktopNav.classList.add("hidden");
+    }, 1500);
 });
 
 // expand and collapse mobile nav
