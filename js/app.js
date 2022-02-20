@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
     "team",
     "pricing",
     "contactUs",
-    "footer",
   ];
   navList.forEach((item) => {
     const listItem = `<li id="d-${pascalToSnake(
@@ -100,29 +99,6 @@ let options = {
   threshold: 1,
 };
 
-// update the nav item and set to active when section comes into view
-let observer = new IntersectionObserver((obList) => {
-  const [observeEntry] = obList;
-  const { isIntersecting, target } = observeEntry;
-
-  if (isIntersecting) {
-    document
-      .querySelectorAll(".nav-item")
-      .forEach((item) => item.classList.remove("active"));
-    document.querySelector(`#d-${target.id}-nav`)?.classList.add("active");
-    document.querySelector(`#m-${target.id}-nav`)?.classList.add("active");
-  }
-});
-
-observer.observe(home);
-observer.observe(about);
-observer.observe(gallery);
-observer.observe(testimonial);
-observer.observe(team);
-observer.observe(pricing);
-observer.observe(contactUs);
-observer.observe(footer);
-
 // scroll to top on clicking button#top
 topButton.addEventListener("click", () => {
   document.body.scrollTo({
@@ -143,3 +119,36 @@ document
   .addEventListener("click", () => {
     document.querySelector(".image-modal").classList.add("hidden");
   });
+
+const isActive = (item) => {
+  const { top } = item;
+  return top <= 75;
+};
+
+const updateActiveElement = (id) => {
+  document
+    .querySelectorAll(".nav-item.active")
+    .forEach((item) => item.classList.remove("active"));
+
+  document.querySelector(`#d-${id}-nav`)?.classList.add("active");
+  document.querySelector(`#m-${id}-nav`)?.classList.add("active");
+};
+
+// listen and update the active element
+window.addEventListener("scroll", (e) => {
+  const homeRect = home.getBoundingClientRect();
+  const aboutRect = about.getBoundingClientRect();
+  const galleryRect = gallery.getBoundingClientRect();
+  const testimonialRect = testimonial.getBoundingClientRect();
+  const teamRect = team.getBoundingClientRect();
+  const pricingRect = pricing.getBoundingClientRect();
+  const contactUsRect = contactUs.getBoundingClientRect();
+
+  if (isActive(contactUsRect)) updateActiveElement("contact-us");
+  else if (isActive(pricingRect)) updateActiveElement("pricing");
+  else if (isActive(teamRect)) updateActiveElement("team");
+  else if (isActive(testimonialRect)) updateActiveElement("testimonial");
+  else if (isActive(galleryRect)) updateActiveElement("gallery");
+  else if (isActive(aboutRect)) updateActiveElement("about");
+  else if (isActive(homeRect)) updateActiveElement("home");
+});
