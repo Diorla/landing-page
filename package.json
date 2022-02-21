@@ -1,0 +1,20 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "This project is created in partial fulfillment of the criteria required in Frontend Development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Diorla/landing-page.git"
+  },
+  "keywords": [],
+  "author": "Ade Adeola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Diorla/landing-page/issues"
+  },
+  "homepage": "https://github.com/Diorla/landing-page#readme"
+}
