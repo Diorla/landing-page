@@ -34,3 +34,33 @@ h2,
 main > div:nth-child(odd) {
   background-color: var(--light-secondary-color);
 }
+
+main > div {
+  opacity: 1;
+  animation: 1.5s linear 0s 1 forwards deshine;
+}
+
+.active-section {
+  animation: 1.5s linear 0s 1 forwards shine;
+  opacity: 0.9;
+}
+
+@keyframes deshine {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.5;
+  }
+}
+
+@keyframes shine {
+  from {
+    opacity: 0.9;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
