@@ -31,10 +31,11 @@ const pascalToSnake = (str) =>
     .toLowerCase()
     .trim();
 
-// create mobile and desktop nav links
+const scrollToElement = (id) => {
+  document.getElementById(id).scrollIntoView();
+};
+
 document.addEventListener("DOMContentLoaded", () => {
-  let desktopList = `<ul>`;
-  let mobileList = `<ul>`;
   const navList = [
     "home",
     "about",
@@ -44,33 +45,32 @@ document.addEventListener("DOMContentLoaded", () => {
     "pricing",
     "contactUs",
   ];
+  const createElementChild = (item, isDesktop) => {
+    const element = document.createElement("li");
+    element.innerHTML = pascalToSentence(item);
+    element.id = isDesktop
+      ? `d-${pascalToSnake(item)}-nav`
+      : `m-${pascalToSnake(item)}-nav`;
+    element.className = "nav-item";
+    return element;
+  };
+  const desktopFrag = document.createElement("ul");
+  const mobileFrag = document.createElement("ul");
+
   navList.forEach((item) => {
-    const listItem = `<li id="d-${pascalToSnake(
-      item
-    )}-nav" class="nav-item"><a href="#${pascalToSnake(
-      item
-    )}">${pascalToSentence(item)}</a></li>`;
-    desktopList += listItem;
-    const mobileItem = `<li id="m-${pascalToSnake(
-      item
-    )}-nav" class="nav-item"><a href="#${pascalToSnake(
-      item
-    )}">${pascalToSentence(item)}</a></li>`;
-    mobileList += mobileItem;
+    const itemId = pascalToSnake(item);
+
+    const element = createElementChild(item, true);
+    element.addEventListener("click", () => scrollToElement(itemId));
+    desktopFrag.appendChild(element);
+
+    const mobileElem = createElementChild(item);
+    mobileElem.addEventListener("click", () => scrollToElement(itemId));
+    mobileFrag.appendChild(mobileElem);
   });
-  desktopList += "</ul>";
-  mobileList += "</ul>";
-  desktopNav.innerHTML = desktopList;
-  mobileMenu.innerHTML = mobileList;
-
-  document
-    .querySelector(`#d-${pascalToSnake(navList[0])}-nav`)
-    .classList.add("active");
-  document
-    .querySelector(`#m-${pascalToSnake(navList[0])}-nav`)
-    .classList.add("active");
+  desktopNav.appendChild(desktopFrag);
+  mobileMenu.appendChild(mobileFrag);
 });
-
 let timeoutId;
 // hide desktop navbar upon scrolling down
 document.addEventListener("scroll", () => {
@@ -105,12 +105,6 @@ mobileMenuIcon.addEventListener("click", () => {
   }
 });
 
-let options = {
-  root: document,
-  rootMargin: "0px",
-  threshold: 1,
-};
-
 // scroll to top on clicking button#top
 topButton.addEventListener("click", () => {
   document.body.scrollTo({
@@ -138,6 +132,8 @@ const isActive = (item) => {
 };
 
 const updateActiveElement = (id) => {
+  if (document.getElementById(id)?.classList.contains("active-section"))
+    return 0;
   document
     .querySelectorAll(".nav-item.active")
     .forEach((item) => item.classList.remove("active"));

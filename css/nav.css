@@ -5,12 +5,13 @@ nav {
   z-index: 1;
 }
 
-nav a {
+nav li {
   text-decoration: none;
   color: var(--dark-primary-color);
+  cursor: pointer;
 }
 
-nav a:hover {
+nav li:hover {
   text-decoration: underline;
 }
 
@@ -23,7 +24,7 @@ nav a:hover {
   text-transform: capitalize;
 }
 
-li.active > a {
+li.active {
   font-weight: bold;
   color: var(--dark-secondary-color);
 }

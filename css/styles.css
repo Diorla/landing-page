@@ -42,7 +42,7 @@ main > div {
 
 .active-section {
   animation: 1.5s linear 0s 1 forwards shine;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 @keyframes deshine {
@@ -51,13 +51,13 @@ main > div {
   }
 
   to {
-    opacity: 0.5;
+    opacity: 0.8;
   }
 }
 
 @keyframes shine {
   from {
-    opacity: 0.9;
+    opacity: 0.8;
   }
 
   to {
