@@ -141,9 +141,14 @@ const updateActiveElement = (id) => {
   document
     .querySelectorAll(".nav-item.active")
     .forEach((item) => item.classList.remove("active"));
-
+  document
+    .querySelectorAll("main > div")
+    .forEach((item) => item.classList.remove("active-section"));
+  // active-class
   document.querySelector(`#d-${id}-nav`)?.classList.add("active");
   document.querySelector(`#m-${id}-nav`)?.classList.add("active");
+
+  document.getElementById(id)?.classList.add("active-section");
 };
 
 // listen and update the active element
