@@ -2,19 +2,7 @@
 This project is created in partial fulfillment of the criteria required in Frontend Development
 
 # Badges
-<img src="https://img.shields.io/badge/submission-pending-orange">
-<img src="https://img.shields.io/github/checks-status/diorla/landing-page/main">
-<img src="https://img.shields.io/github/issues/Diorla/landing-page"/>
-<img src="https://img.shields.io/github/license/Diorla/landing-page">
-<img src="https://img.shields.io/github/languages/code-size/diorla/landing-page">
-<img src="https://img.shields.io/github/forks/Diorla/landing-page">
-<img src="https://img.shields.io/github/stars/Diorla/landing-page">
-<img src="https://img.shields.io/netlify/593d12ba-276c-43ae-99d5-ab7cdb8a3cf2">
-<img src="https://img.shields.io/github/languages/count/diorla/landing-page"/>
-<img src="https://img.shields.io/github/languages/top/diorla/landing-page"/>
-<img src="https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fuda-landing-page.netlify.app%2F"/>
-<img src="https://img.shields.io/github/commit-status/diorla/landing-page/main/06f8f5d94d2dc1322be70e5982b384acfdf06688"/>
-<img src="https://img.shields.io/github/license/diorla/landing-page"/> <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/diorla/landing-page"> <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/diorla/landing-page"> <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/w/diorla/landing-page">
+<img src="https://img.shields.io/badge/submission-pending-orange"> <img src="https://img.shields.io/github/checks-status/diorla/landing-page/main"> <img src="https://img.shields.io/github/issues/Diorla/landing-page"/> <img src="https://img.shields.io/github/license/Diorla/landing-page"> <img src="https://img.shields.io/github/languages/code-size/diorla/landing-page"> <img src="https://img.shields.io/github/forks/Diorla/landing-page"> <img src="https://img.shields.io/github/stars/Diorla/landing-page"> <img src="https://img.shields.io/netlify/593d12ba-276c-43ae-99d5-ab7cdb8a3cf2"> <img src="https://img.shields.io/github/languages/count/diorla/landing-page"/> <img src="https://img.shields.io/github/languages/top/diorla/landing-page"/> <img src="https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fuda-landing-page.netlify.app%2F"/> <img src="https://img.shields.io/github/commit-status/diorla/landing-page/main/06f8f5d94d2dc1322be70e5982b384acfdf06688"/> <img src="https://img.shields.io/github/license/diorla/landing-page"/> <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/diorla/landing-page"> <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/diorla/landing-page"> <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/w/diorla/landing-page">
 
 
 <img src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2FDiorla%2Flanding-page"/>
