@@ -1,8 +1,7 @@
 #home {
   background-image: url("https://cdn.pixabay.com/photo/2018/08/04/18/17/wallpaper-3584226_960_720.jpg");
   width: 100%;
-  height: calc(100vh - 4.8rem);
-  margin-top: -2rem;
+  min-height: calc(100vh - 4.8rem);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,7 +14,6 @@
 }
 
 #home::after {
-  /* background-image: url("https://cdn.pixabay.com/photo/2014/04/02/10/21/spacecraft-303592_960_720.png"); */
   width: 10rem;
   height: 10rem;
   position: fixed;
@@ -67,9 +65,9 @@
   }
 }
 
-@media screen and (max-width: 64rem) {
+@media screen and (max-width: 640px) {
   #home {
-    height: 100vh;
+    min-height: 100vh;
     margin-top: 0;
   }
 }
