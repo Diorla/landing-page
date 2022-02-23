@@ -1,5 +1,5 @@
 fieldset {
-  border: 1px solid var(--dark-secondary-color);
+  border: 0.1rem solid var(--dark-secondary-color);
 }
 
 .contact-form,
@@ -19,7 +19,7 @@ label {
 
 input,
 textarea {
-  border: 1px solid var(--secondary-color);
+  border: 0.1rem solid var(--secondary-color);
   border-radius: 0.2rem;
   font-size: var(--text-size-normal);
   padding: 0.4rem;
@@ -28,7 +28,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border: 1px solid var(--dark-secondary-color);
+  border: 0.1rem solid var(--dark-secondary-color);
 }
 
 textarea {

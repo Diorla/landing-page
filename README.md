@@ -67,12 +67,12 @@ You may double click the `index.html` file, or drag it over an opened web browse
 This project does not depend on any external libraries or frameworks.
 
 ## HTML
-![HTML](https://img.shields.io/badge/HTML-document-ade01a)
+![HTML](https://img.shields.io/badge/HTML-document-dd4b25)
 
 This is a single html file, `index.html`, where all the initial content is loaded
 
 ## CSS
-![CSS](https://img.shields.io/badge/CSS-style-ade)
+![CSS](https://img.shields.io/badge/CSS-style-264de4)
 
 This consists of
 - `base.css`: to provide initial style and override default behaviours
@@ -81,12 +81,13 @@ This consists of
 - Other css files like `about.css` or `contact.css`. It contains styles specific to each section of the page.
 
 ## Javascript
-![JS](https://img.shields.io/badge/JS-interaction-ad301a)
+![JS](https://img.shields.io/badge/JS-language-cfb430)
 
 It is a single file, `app.js`. It does the following
 - Load navigation bar
 - Add scrolling behavior to various section of the screen
 - Identify active section of the page and update the page accordingly
+- Toggles hide and reveal for navbar
 # Acknowledgement
 - Favicon from [iconarchive](https://iconarchive.com)
 - Icons from [fontawesome](https://fontawesome.com)

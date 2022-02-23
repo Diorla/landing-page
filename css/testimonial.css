@@ -1,8 +1,8 @@
 .testimonial-card {
-  width: 24rem;
+  width: clamp(18rem, 100%, 30rem);
   background-color: white;
   margin: 1.2rem;
-  box-shadow: 0 0 4px;
+  box-shadow: 0 0 0.4rem;
   border-top: 0.3rem solid var(--primary-color);
   border-radius: 0.8rem;
   padding: 2rem;

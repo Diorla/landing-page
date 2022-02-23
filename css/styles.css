@@ -36,8 +36,8 @@ main > div:nth-child(odd) {
 }
 
 main > div.active-section:nth-child(odd) {
-  border: 2px solid var(--light-primary-color);
+  border: 0.2rem solid var(--light-primary-color);
 }
 main > div.active-section:nth-child(even) {
-  border: 2px solid var(--light-secondary-color);
+  border: 0.2rem solid var(--light-secondary-color);
 }
