@@ -17,8 +17,7 @@
 
 
 # Introduction
-This project is created in partial fulfillment of the criteria required in Frontend Development
-[Bottom][1]
+This project is created in partial fulfillment of the criteria required in Frontend Development.
 # Badges
 ![submission](https://img.shields.io/badge/submission-pending-orange)
 ![status check](https://img.shields.io/github/checks-status/diorla/landing-page/main)
@@ -98,6 +97,6 @@ It is a single file, `app.js`. It does the following
 - Readme image from [undraw](https://undraw.co/)
 
 # License
-This is under [MIT](https://choosealicense.com/licenses/mit/) license, for more details, please check `./License.md`.
+This is under [MIT](https://choosealicense.com/licenses/mit/) license, for more details, please check [License.md](https://github.com/Diorla/landing-page/blob/main/LICENCE.md).
 
 [(Back to top)](#contents)

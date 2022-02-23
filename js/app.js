@@ -14,85 +14,48 @@ const mobileMenuIcon = document.querySelector(".fa-solid.menu-icon");
 const galleryCards = document.querySelectorAll(".gallery-card");
 
 /**
- * @description Converts pascal case to sentence case
- * @param {string} str - The pascal case that will be transformed to sentence
- * @returns {string} sentence created from a single word
- * @example pascalToSentence("pascalToSentence") // pascal to sentence
- */
-const pascalToSentence = (str) =>
-  str
-    .split("")
-    .map((item) => (/[A-Z]/.test(item) ? ` ${item}` : item))
-    .join("")
-    .toLowerCase()
-    .trim();
-
-/**
- * @description Converts pascal case to sentence case
- * @param {string} str - The pascal case that will be transformed to snake
- * @returns {string} snake case created from a single word
- * @example pascalToSentence("pascalToSnake") // pascal-to-snake
- */
-const pascalToSnake = (str) =>
-  str
-    .split("")
-    .map((item) => (/[A-Z]/.test(item) ? `-${item}` : item))
-    .join("")
-    .toLowerCase()
-    .trim();
-
-/**
  * @description Scrolls the document to the specified part of the page
  * @param {string} id - The id of the section that the page will scroll to
  * @returns {void} nothing
  */
 const scrollToElement = (id) => {
   document.getElementById(id).scrollIntoView({
-    behavior: "smooth"
+    behavior: "smooth",
   });
 };
 
 /**
  * @description Used to create a new list element
- * @param {string} item - It will be used to generate the id
+ * @param {string} itemId - The id of the section nav item will be created from
  * @param {boolean} [isDesktop=false] - big devices vs small devices
  * @returns {HTMLLIElement} <li id="d-item-nav" class="nav-item">item</li>
  * @example createElementChild("hello") // <li id="m-hello-nav" class="nav-item">hello</li>
  * @example createElementChild("hello", true) // <li id="d-hello-nav" class="nav-item">hello</li>
  */
-const createElementChild = (item, isDesktop) => {
+const createElementChild = (itemId, isDesktop) => {
   const element = document.createElement("li");
-  element.innerHTML = pascalToSentence(item);
-  element.id = isDesktop
-    ? `d-${pascalToSnake(item)}-nav`
-    : `m-${pascalToSnake(item)}-nav`;
+  element.innerHTML = itemId.split("-").join(" ");
+  element.id = isDesktop ? `d-${itemId}-nav` : `m-${itemId}-nav`;
   element.className = "nav-item";
   return element;
 };
 
 // create nav items for big and small devices
 document.addEventListener("DOMContentLoaded", () => {
-  const navList = [
-    "home",
-    "about",
-    "gallery",
-    "testimonial",
-    "team",
-    "pricing",
-    "contactUs",
-  ];
+  // get all the children of <main/>
+  const navList = document.querySelectorAll("main > div");
 
   const desktopFrag = document.createElement("ul");
   const mobileFrag = document.createElement("ul");
 
   navList.forEach((item) => {
-    const itemId = pascalToSnake(item);
+    const itemId = item.id;
 
-    const element = createElementChild(item, true);
+    const element = createElementChild(item.id, true);
     element.addEventListener("click", () => scrollToElement(itemId));
     desktopFrag.appendChild(element);
 
-    const mobileElem = createElementChild(item);
+    const mobileElem = createElementChild(item.id);
     mobileElem.addEventListener("click", () => scrollToElement(itemId));
     mobileFrag.appendChild(mobileElem);
   });
