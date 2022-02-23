@@ -47,7 +47,9 @@ const pascalToSnake = (str) =>
  * @returns {void} nothing
  */
 const scrollToElement = (id) => {
-  document.getElementById(id).scrollIntoView();
+  document.getElementById(id).scrollIntoView({
+    behavior: "smooth"
+  });
 };
 
 /**

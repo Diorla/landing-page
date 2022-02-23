@@ -1,7 +1,6 @@
 @import url(variables.css);
 :root {
   font-size: 10px;
-  scroll-behavior: smooth;
 }
 body {
   margin: 0;
